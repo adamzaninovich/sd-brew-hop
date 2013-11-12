@@ -10,8 +10,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem "bootstrap-sass", "~> 3.0.2.1"
 gem "devise", "~> 3.2.0" # run `rails g devise:views` to customize views
-#gem "omniauth"
-#gem "omniauth-facebook", '~> 1.4.1'
+gem "omniauth"
+gem "omniauth-facebook", '~> 1.4.1'
 
 group :development do
   gem 'pry'
