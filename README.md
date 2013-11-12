@@ -14,6 +14,12 @@ the breweries in the county.
 ##### Submitting breweries:
 ...
 
+##### Getting Started:
+1. `bundle install`
+2. `rake db:create`
+3. `rake db:migrate`
+4. `rake db:seed`
+
 ##### Adding a feature:
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -22,7 +28,7 @@ the breweries in the county.
 5. Create new Pull Request
 
 ##### Keep up-to-date:
-1. Add upstream (`git remote add upstream git@github.com:adamzaninovich/Hamilton.git`)
+1. Add upstream (`git remote add upstream git@github.com:adamzaninovich/sd-brew-hop.git`)
 2. Fetch lastest upstream master (`git pull upstream`)
 3. Checkout master (`git checkout master`)
 4. Merge upstream into master (`git merge upstream/master`)
