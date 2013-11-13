@@ -1,9 +1,0 @@
-<% if current_user %>
-  <p class="navbar-text navbar-right">
-    Logged in as <%= current_user.name %>
-    (<%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'navbar-link' %>)
-  </p>
-<% else %>
-  <%= button_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook), class: "btn btn-default navbar-btn navbar-right" %>
-<% end %>
-
