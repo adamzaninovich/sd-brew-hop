@@ -17,3 +17,6 @@
 
 # Ignore fb config
 /config/facebook.yml
+
+# Ignore images
+/public/uploads
