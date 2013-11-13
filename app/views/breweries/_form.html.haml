@@ -14,6 +14,10 @@
     .col-sm-6
       = f.url_field :url, class: 'form-control'
   .form-group
+    = f.label :remote_image_url, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :remote_image_url, class: 'form-control'
+  .form-group
     = f.label :location, class: 'col-sm-2 control-label'
     .col-sm-6
       = f.text_field :location, class: 'form-control'
