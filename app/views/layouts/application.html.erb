@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SdBrewHop</title>
+  <title>SD Brew Hop</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<% if current_user %>
-  Logged in as <%= current_user.name %>.
-  (<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>)
-<% else %>
-  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-<% end %>
+<%= render partial: 'shared/user_status' %>
 <%= render partial: 'shared/flash_messages' %>
+
 <%= yield %>
 
 </body>
