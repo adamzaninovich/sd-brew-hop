@@ -14,6 +14,9 @@ gem "devise", "~> 3.2.0" # run `rails g devise:views` to customize views
 gem "omniauth"
 gem "omniauth-facebook", '~> 1.4.1'
 
+gem 'rmagick', '~> 2.13.2'
+gem 'carrierwave', '~> 0.9.0'
+
 group :development do
   gem 'pry'
 end
