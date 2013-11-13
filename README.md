@@ -20,6 +20,7 @@ keep track of all the breweries in the county.
 2. `rake db:create`
 3. `rake db:migrate`
 4. `rake db:seed`
+5. Copy `config/facebook.yml.template` to `config/facebook.yml` and fill in your app id and secret
 
 ##### Adding a feature:
 1. Fork it

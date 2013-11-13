@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<% if current_user %>
+  Logged in as <%= current_user.name %>.
+  (<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>)
+<% else %>
+  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<% end %>
+<%= render partial: 'shared/flash_messages' %>
 <%= yield %>
 
 </body>
