@@ -1,7 +1,7 @@
 # SD Brew Hop
 
 A web application to track the breweries you've been to in San Diego.
-Can you "hop" them all?
+Can you **hop** them all?
 
 ### Why?
 
