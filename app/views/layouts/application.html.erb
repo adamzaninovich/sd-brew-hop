@@ -1,21 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SdBrewHop</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+  <title>SD Brew Hop</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 
-<% if current_user %>
-  Logged in as <%= current_user.name %>.
-  (<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>)
-<% else %>
-  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-<% end %>
-<%= render partial: 'shared/flash_messages' %>
-<%= yield %>
+  <!-- Wrap all page content here -->
+  <div id="wrap">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to root_path, class: 'navbar-brand' do %>
+            <%= image_tag 'hop_icon.png', height: 18 %>
+          <% end %>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Breweries', breweries_path %></li>
+          </ul>
+          <%= render partial: 'shared/user_status' %>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <%= render partial: 'shared/flash_messages' %>
+      <%= yield %>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted credit">
+        &copy; 2013 SD Brew Hop
+        &nbsp;&bull;&nbsp;
+        <%= link_to 'Terms', terms_path %>
+        &nbsp;&bull;&nbsp;
+        <%= link_to 'Privacy', privacy_path %>
+      </p>
+    </div>
+  </div>
 
 </body>
 </html>
