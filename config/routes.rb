@@ -1,5 +1,10 @@
 SdBrewHop::Application.routes.draw do
+
   resources :breweries
 
-  root 'breweries#index'
+  get "legal/terms"   => 'home#terms',   as: :terms
+  get "legal/privacy" => 'home#privacy', as: :privacy
+
+  root "home#index"
+
 end
