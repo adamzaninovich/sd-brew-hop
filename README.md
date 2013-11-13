@@ -1,14 +1,15 @@
 # SD Brew Hop
 
-A web application to track the breweries you've been to in San Diego
+A web application to track the breweries you've been to in San Diego.
+Can you **hop** them all?
 
 ### Why?
 
-As of 11/12/13, there are 80 breweries in San Diego County. We want to
+As of 11/12/13, there are 80 breweries in San Diego County. We wanted to
 create a way for people to keep track of the ones they have been to and
 get suggestions for new ones to visit. Also, with over 30 more breweries
-in the process of opening, want to provide a place to keep track of all
-the breweries in the county.
+currently in the process of opening, we wanted to provide a place to
+keep track of all the breweries in the county.
 
 ### How to Contribute
 ##### Submitting breweries:
