@@ -1,11 +1,9 @@
-S3_CONFIG = ConfigLoader.load_config :s3
-
 CarrierWave.configure do |config|
   config.fog_credentials = {
     provider: 'AWS',
-    aws_access_key_id: S3_CONFIG[:id],
-    aws_secret_access_key: S3_CONFIG[:secret]
+    aws_access_key_id: ENV['S3_ID'],
+    aws_secret_access_key: ENV['S3_SECRET']
   }
-  config.fog_directory  = S3_CONFIG[:bucket]
+  config.fog_directory  = ENV['S3_BUCKET']
   config.cache_dir = "#{Rails.root}/tmp/uploads"
 end

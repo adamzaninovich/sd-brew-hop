@@ -15,9 +15,8 @@
 /log/*.log
 /tmp
 
-# Ignore configs
-/config/facebook.yml
-/config/s3.yml
+# Ignore config
+.env
 
 # Ignore images
 /public/uploads

@@ -1,9 +1,0 @@
-production: &facebook_config
-  id: 'YOUR_APP_ID'
-  secret: 'YOUR_APP_SECRET'
-
-development:
-  <<: *facebook_config
-
-test:
-  <<: *facebook_config

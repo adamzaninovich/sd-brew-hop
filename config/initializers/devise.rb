@@ -1,5 +1,3 @@
-FACEBOOK_CONFIG = ConfigLoader.load_config :facebook
-
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -27,7 +25,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  config.omniauth :facebook, FACEBOOK_CONFIG[:id], FACEBOOK_CONFIG[:secret]
+  config.omniauth :facebook, ENV['FACEBOOK_ID'], ENV['FACEBOOK_SECRET']
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
