@@ -16,6 +16,8 @@ gem "omniauth-facebook", '~> 1.4.1'
 
 gem 'rmagick', '~> 2.13.2'
 gem 'carrierwave', '~> 0.9.0'
+gem 'fog', '~> 1.18.0'
+gem 'unf', '~> 0.1.3'
 
 gem 'annotate', '2.5.0'
 
