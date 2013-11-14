@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.1'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'haml-rails', '0.4'
 gem 'uglifier', '>= 1.3.0'
@@ -19,14 +18,19 @@ gem 'carrierwave', '~> 0.9.0'
 gem 'fog', '~> 1.18.0'
 gem 'unf', '~> 0.1.3'
 
-gem 'annotate', '2.5.0'
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
 
 group :development do
   gem 'pry'
+  gem 'annotate', '2.5.0'
 end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
+  gem 'sqlite3'
 end
 
 group :doc do
