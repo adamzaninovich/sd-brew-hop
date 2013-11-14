@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.1'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'haml-rails', '0.4'
 gem 'uglifier', '>= 1.3.0'
@@ -21,8 +20,14 @@ gem 'unf', '~> 0.1.3'
 
 gem 'annotate', '2.5.0'
 
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
+
 group :development do
   gem 'pry'
+  gem 'sqlite3'
 end
 
 group :development, :test do
