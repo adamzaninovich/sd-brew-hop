@@ -1,5 +1,5 @@
 class ConfigLoader
-  def self.load_config tag, env=Rails.config
+  def self.load_config tag, env=Rails.env
     tag = tag.to_s
     if keys_for_tag? tag
       HashWithIndifferentAccess[config_for_tag tag]
