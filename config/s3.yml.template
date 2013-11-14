@@ -1,0 +1,9 @@
+production: &s3_config
+  id: 'YOUR_ID'
+  secret: 'YOUR_SECRET'
+
+development:
+  <<: *s3_config
+
+test:
+  <<: *s3_config
