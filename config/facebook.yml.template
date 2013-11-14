@@ -1,6 +1,6 @@
 production: &facebook_config
-  app_id: 'YOUR_APP_ID'
-  app_secret: 'YOUR_APP_SECRET'
+  id: 'YOUR_APP_ID'
+  secret: 'YOUR_APP_SECRET'
 
 development:
   <<: *facebook_config

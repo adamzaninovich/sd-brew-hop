@@ -3,6 +3,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th></th>
       <th>Name</th>
       <th>Web Address</th>
       <th>Location</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @breweries.each do |brewery| %>
       <tr>
+        <td><%= image_tag brewery.image_url(:tiny) if brewery.image? %>
         <td><%= brewery.name %></td>
         <td><%= link_to format_url(brewery.url), brewery.url, target: '_blank' %></td>
         <td><%= brewery.location %></td>

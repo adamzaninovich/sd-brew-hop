@@ -1,0 +1,17 @@
+.pull-right= image_tag @brewery.image_url if @brewery.image?
+
+%h1= @brewery.name
+%p.lead= link_to format_url(@brewery.url), @brewery.url
+
+%p
+  %strong Located in
+  = @brewery.location
+  - if @brewery.year_opened
+    and
+    %strong opened in
+    = @brewery.year_opened
+
+= link_to 'Edit', edit_brewery_path(@brewery)
+|
+\#{link_to 'Back', breweries_path}
+
