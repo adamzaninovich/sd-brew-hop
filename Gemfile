@@ -9,7 +9,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
-
 gem "bootstrap-sass", "~> 3.0.2.1"
 gem "devise", "~> 3.2.0" # run `rails g devise:views` to customize views
 gem "omniauth"
@@ -27,6 +26,7 @@ group :production do
 end
 
 group :development do
+  gem 'foreman'
   gem 'pry'
   gem 'annotate', '2.5.0'
 end
