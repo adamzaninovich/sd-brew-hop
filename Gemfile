@@ -18,8 +18,6 @@ gem 'carrierwave', '~> 0.9.0'
 gem 'fog', '~> 1.18.0'
 gem 'unf', '~> 0.1.3'
 
-gem 'annotate', '2.5.0'
-
 group :production do
   gem 'pg'
   gem 'thin'
@@ -27,11 +25,12 @@ end
 
 group :development do
   gem 'pry'
-  gem 'sqlite3'
+  gem 'annotate', '2.5.0'
 end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
+  gem 'sqlite3'
 end
 
 group :doc do
