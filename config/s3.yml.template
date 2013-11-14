@@ -1,6 +1,7 @@
 production: &s3_config
-  id: 'YOUR_ID'
-  secret: 'YOUR_SECRET'
+  id: 'YOUR ID'
+  secret: 'YOUR SECRET'
+  bucket: 'YOUR BUCKET'
 
 development:
   <<: *s3_config
