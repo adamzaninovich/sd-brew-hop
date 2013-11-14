@@ -23,6 +23,7 @@ gem 'unf', '~> 0.1.3'
 group :production do
   gem 'pg'
   gem 'thin'
+  gem 'rails_12factor'
 end
 
 group :development do
