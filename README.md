@@ -11,16 +11,25 @@ get suggestions for new ones to visit. Also, with over 30 more breweries
 currently in the process of opening, we wanted to provide a place to
 keep track of all the breweries in the county.
 
-### How to Contribute
-##### Submitting breweries:
-...
-
-##### Getting Started:
+### Getting Started:
 1. `bundle install`
 2. `rake db:create`
 3. `rake db:migrate`
 4. `rake db:seed`
-5. Copy `config/facebook.yml.template` to `config/facebook.yml` and fill in your app id and secret
+5. create a .env file with the following variables:
+
+		FACEBOOK_ID
+		FACEBOOK_SECRET
+		S3_ID
+		S3_SECRET
+		S3_BUCKET
+
+6. `foreman start`
+7. app will be running at `http://localhost:5000`
+
+### How to Contribute
+##### Submitting breweries:
+...
 
 ##### Adding a feature:
 1. Fork it
