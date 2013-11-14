@@ -32,7 +32,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def extension_white_list
-    %w(jpg jpeg gif png)
+    %w|jpg jpeg gif png|
+  end
+
+  def filename
+    "#{model.name.underscore}.#{file.extension}" if original_filename
   end
 
 end
