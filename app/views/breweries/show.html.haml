@@ -1,4 +1,5 @@
-.pull-right= image_tag @brewery.image_url if @brewery.image?
+- if @brewery.image?
+  .pull-right= image_tag @brewery.image_url, class:'img-thumbnail'
 
 %h1= @brewery.name
 %p.lead= link_to format_url(@brewery.url), @brewery.url
