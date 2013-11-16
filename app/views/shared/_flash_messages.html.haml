@@ -2,11 +2,11 @@
   .alert.alert-success.alert-dismissable
     %button.close{type:"button", data:{dismiss:"alert"}, 'aria-hidden' => true} &times;
     %span.glyphicon.glyphicon-ok-sign
-    = notice
+    =raw notice
 
 - if alert
   .alert.alert-danger.alert-dismissable
     %button.close{type:"button", data:{dismiss:"alert"}, 'aria-hidden' => true} &times;
     %span.glyphicon.glyphicon-exclamation-sign
-    = alert
+    =raw alert
 

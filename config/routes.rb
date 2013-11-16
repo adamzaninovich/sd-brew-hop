@@ -1,6 +1,8 @@
 SdBrewHop::Application.routes.draw do
 
-  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
+  get 'auth/:provider/callback' => 'sessions#create'
+  get 'auth/failure' => redirect('/')
+  delete 'sessions/destroy', as: :sign_out
 
   resources :breweries
 
