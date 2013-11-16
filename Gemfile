@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem "bootstrap-sass", "~> 3.0.2.1"
+gem "omniauth"
 gem "omniauth-facebook", '~> 1.4.1'
 
 gem 'rmagick', '~> 2.13.2'
