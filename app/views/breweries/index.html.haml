@@ -1,0 +1,54 @@
+:coffee
+  jQuery ->
+    selector = '#map'
+    center =
+      latitude: '32.85'
+      longitude: '-117.15'
+    map = new Map selector, center, 10
+    breweries = jQuery(selector).data 'breweries'
+    for brewery in breweries
+      if brewery.address
+        location =
+          latitude: brewery.latitude
+          longitude: brewery.longitude
+        map.addMarker location, brewery.name
+
+.row
+  .col-lg-8
+    %h1 Breweries in San Diego
+    %table.table.table-striped
+      %thead
+        %tr
+          %th
+          %th
+          %th Name
+          %th Web Address
+          %th Location
+          %th Year opened
+          %th
+          %th
+      %tbody
+        - @breweries.each do |brewery|
+          %tr
+            %td
+              = image_tag brewery.image_url(:tiny) if brewery.image?
+            %td
+              - if brewery.address
+                %span.glyphicon.glyphicon-map-marker
+            %td= link_to brewery.name, brewery
+            %td= link_to format_url(brewery.url), brewery.url, target: '_blank'
+            %td= brewery.location
+            %td= brewery.year_opened
+            %td
+              = link_to edit_brewery_path(brewery) do
+                %span.glyphicon.glyphicon-pencil
+            %td
+              = link_to brewery, method: :delete, data: { confirm: 'Are you sure?' } do
+                %span.glyphicon.glyphicon-trash
+
+    %br/
+    = link_to 'New Brewery', new_brewery_path
+
+  .col-lg-4{style:'position:fixed;right:150px;width:375px;'}
+    #map.img-thumbnail{style: 'width:100%;height:600px', data: {breweries:@breweries.to_json}}
+

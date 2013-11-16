@@ -1,5 +1,11 @@
 class Brewery < ActiveRecord::Base
   mount_uploader :image, ImageUploader
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
+  def has_location?
+    latitude.present? && longitude.present?
+  end
 end
 
 # == Schema Information
@@ -14,5 +20,8 @@ end
 #  created_at  :datetime
 #  updated_at  :datetime
 #  image       :string(255)
+#  address     :text
+#  latitude    :float
+#  longitude   :float
 #
 
