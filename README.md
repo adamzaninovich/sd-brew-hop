@@ -11,6 +11,11 @@ get suggestions for new ones to visit. Also, with over 30 more breweries
 currently in the process of opening, we wanted to provide a place to
 keep track of all the breweries in the county.
 
+### Screenshots
+
+![brewery show page](http://i.imgur.com/FJ6Yav6.png)
+![breweries index page](http://i.imgur.com/XdQU39H.png)
+
 ### Getting Started:
 1. `bundle install`
 2. `rake db:create`
