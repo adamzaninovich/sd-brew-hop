@@ -1,0 +1,19 @@
+/ Fixed navbar
+.navbar.navbar-default.navbar-fixed-top{role: "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{type: "button", data: {target: ".navbar-collapse", toggle: "collapse"}}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to root_path, class: 'navbar-brand' do
+        = image_tag 'hop_icon.png', height: 18
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.active= link_to 'Home', root_path
+        - if current_user
+          %li= link_to 'Breweries', breweries_path
+      = render partial: 'shared/user_status'
+    / /.nav-collapse
+

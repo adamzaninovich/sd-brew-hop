@@ -9,6 +9,6 @@ SdBrewHop::Application.routes.draw do
   get "legal/terms"   => 'home#terms',   as: :terms
   get "legal/privacy" => 'home#privacy', as: :privacy
 
-  root "home#index"
+  root "home#home"
 
 end

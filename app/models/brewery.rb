@@ -6,6 +6,10 @@ class Brewery < ActiveRecord::Base
   def has_location?
     latitude.present? && longitude.present?
   end
+
+  def self.random_image *args
+    select {|b| b.image.present?}.sample.image_url *args
+  end
 end
 
 # == Schema Information
