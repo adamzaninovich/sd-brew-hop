@@ -17,6 +17,8 @@ gem 'carrierwave', '~> 0.9.0'
 gem 'fog', '~> 1.18.0'
 gem 'unf', '~> 0.1.3'
 
+gem 'geocoder', '~> 1.1.8'
+
 group :production do
   gem 'pg'
   gem 'thin'

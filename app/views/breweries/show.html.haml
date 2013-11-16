@@ -1,18 +1,41 @@
-- if @brewery.image?
-  .pull-right= image_tag @brewery.image_url, class:'img-thumbnail'
+:coffee
+  jQuery ->
+    selector = '#map'
+    canvas = jQuery selector
+    location =
+      latitude: canvas.data 'latitude'
+      longitude: canvas.data 'longitude'
+    map = new Map selector, location
+    map.addMarker location, canvas.data 'name'
+.row
+  .col-lg-7
+    %h1= @brewery.name
+    %p.lead= link_to format_url(@brewery.url), @brewery.url
+    %p
+      = @brewery.address
+    %p
+      %strong Located in
+      = @brewery.location
+      - if @brewery.year_opened
+        and
+        %strong opened in
+        = @brewery.year_opened
 
-%h1= @brewery.name
-%p.lead= link_to format_url(@brewery.url), @brewery.url
+    - if @brewery.has_location?
+      #map.img-thumbnail{style: 'width:652px; height:350px', data: {latitude:@brewery.latitude, longitude: @brewery.longitude, name: @brewery.name}}
 
-%p
-  %strong Located in
-  = @brewery.location
-  - if @brewery.year_opened
-    and
-    %strong opened in
-    = @brewery.year_opened
+    %p
+      = link_to 'Edit', edit_brewery_path(@brewery)
+      |
+      \#{link_to 'Back', breweries_path}
 
-= link_to 'Edit', edit_brewery_path(@brewery)
-|
-\#{link_to 'Back', breweries_path}
-
+  .col-lg-5
+    - if @brewery.image?
+      = image_tag @brewery.image_url(:thumb), class:'img-rounded'
+    - if @brewery.has_location?
+      %h3 Nearby Breweries
+      %ul.list-unstyled
+        - for brewery in @brewery.nearbys
+          %li
+            = link_to brewery.name, brewery
+            (#{brewery.distance.round 2} miles away)
