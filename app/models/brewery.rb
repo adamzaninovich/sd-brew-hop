@@ -1,3 +1,7 @@
+class Brewery < ActiveRecord::Base
+  mount_uploader :image, ImageUploader
+end
+
 # == Schema Information
 #
 # Table name: breweries
@@ -12,6 +16,3 @@
 #  image       :string(255)
 #
 
-class Brewery < ActiveRecord::Base
-  mount_uploader :image, ImageUploader
-end

@@ -1,3 +1,9 @@
+require 'spec_helper'
+
+describe Brewery do
+  pending "add some examples to (or delete) #{__FILE__}"
+end
+
 # == Schema Information
 #
 # Table name: breweries
@@ -12,8 +18,3 @@
 #  image       :string(255)
 #
 
-require 'spec_helper'
-
-describe Brewery do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
