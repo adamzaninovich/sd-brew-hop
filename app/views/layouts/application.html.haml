@@ -25,10 +25,13 @@
         = yield
     #footer
       .container
-        %p.text-muted.credit
-          \&copy; 2013 SD Brew Hop
-          \&nbsp;&bull;&nbsp;
-          \#{link_to 'Terms', terms_path}
-          \&nbsp;&bull;&nbsp;
-          \#{link_to 'Privacy', privacy_path}
+        .text-muted.credit.row
+          .col-lg-4
+            %small &copy; 2013 SD Brew Hop
+          .col-lg-4.center
+            %small #{link_to 'Terms', terms_path}
+            %small &nbsp;&bull;&nbsp;
+            %small #{link_to 'Privacy', privacy_path}
+          .col-lg-4.right-align
+            %small P.S. You look great today
 
