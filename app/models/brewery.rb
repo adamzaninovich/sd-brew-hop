@@ -1,4 +1,6 @@
 class Brewery < ActiveRecord::Base
+  has_many :hops
+
   mount_uploader :image, ImageUploader
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
@@ -9,6 +11,12 @@ class Brewery < ActiveRecord::Base
 
   def self.random_image *args
     select {|b| b.image.present?}.sample.image_url *args
+  end
+
+  def leaderboard
+    User.all.map do |user|
+      [user, Hop.for_brewery_and_user(self, user).count]
+    end.sort_by(&:last).reverse
   end
 end
 

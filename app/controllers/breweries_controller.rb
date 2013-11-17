@@ -5,12 +5,13 @@ class BreweriesController < ApplicationController
   # GET /breweries
   # GET /breweries.json
   def index
-    @breweries = Brewery.order(:name).all
+    @breweries = Brewery.order :name
   end
 
   # GET /breweries/1
   # GET /breweries/1.json
   def show
+    @hop = Hop.new user: current_user, brewery: @brewery
   end
 
   # GET /breweries/new

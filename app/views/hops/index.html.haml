@@ -1,0 +1,25 @@
+%h1 Listing hops
+
+%table
+  %tr
+    %th User
+    %th Brewery
+    %th Image
+    %th Message
+    %th
+    %th
+    %th
+
+  - @hops.each do |hop|
+    %tr
+      %td= hop.user
+      %td= hop.brewery
+      %td= hop.image
+      %td= hop.message
+      %td= link_to 'Show', hop
+      %td= link_to 'Edit', edit_hop_path(hop)
+      %td= link_to 'Destroy', hop, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Hop', new_hop_path

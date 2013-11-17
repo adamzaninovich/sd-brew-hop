@@ -1,0 +1,24 @@
+%button.btn.btn-primary.btn-lg{data:{toggle:'modal', target:'#hop-form'}}
+  Hop it!
+= form_for [@brewery,@hop], html: { multipart: true, role: 'form', class: 'form-horizontal' } do |f|
+  #hop-form.modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{type: 'button', data:{dismiss:'modal'}, aria:{hidden:true, labelledby:'hop-formLabel'}} &times;
+          %h4.modal-title Hop #{@brewery.name}!
+        .modal-body
+          .form-group
+            .col-sm-1
+              = f.label :image, '&nbsp;'.html_safe, class: 'glyphicon glyphicon-camera control-label'
+            .col-sm-11
+              = f.file_field :image, class: 'form-control'
+          .form-group
+            .col-sm-1
+              = f.label :message, '&nbsp;'.html_safe, class: 'glyphicon glyphicon-comment control-label'
+            .col-sm-11
+              = f.text_area :message, class: 'form-control', placeholder: "Have something to say about your visit?"
+        .modal-footer
+          %button.btn.btn-default{type:"button", data:{dismiss:"modal"}} Just kidding!
+          = f.submit "Hop #{@brewery.name}!", class: 'btn btn-primary'
+

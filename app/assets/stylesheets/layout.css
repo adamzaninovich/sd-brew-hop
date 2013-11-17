@@ -1,3 +1,13 @@
+/* Helpers
+-------------------------------------------------- */
+
+.center {
+  text-align: center;
+}
+.right-align {
+  text-align: right;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 
