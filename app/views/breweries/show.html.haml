@@ -11,8 +11,8 @@
   .col-lg-7
     %h1= @brewery.name
     %p.lead= link_to format_url(@brewery.url), @brewery.url
-    %p
-      = @brewery.address
+    %p= render partial: 'hops/new_modal'
+    = simple_format @brewery.address
     %p
       %strong Located in
       = @brewery.location

@@ -1,0 +1,307 @@
+# Current as of 2013-11-11
+---
+- name: Acoustic Ales Brewing Experiment
+  url: http://www.acousticales.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/1/acoustic+ales+brewing+experiment.jpg
+  location: Midtown
+  year_opened: 2013
+  address: "1795 Hancock St, Suite P1\r\nSan Diego, Ca 92110"
+- name: AleSmith Brewing Company
+  url: http://alesmith.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/2/ale_smith+brewing+company.jpeg
+  location: Miramar
+  address: 9368 Cabot Dr. San Diego, CA 92126
+- name: Alpine Beer Company
+  url: http://www.alpinebeerco.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/3/alpine+beer+company.jpg
+  location: Alpine
+  address: "2351 Alpine Blvd\r\nAlpine CA 91901"
+- name: Amplified Ale Works
+  url: http://www.amplifiedales.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/4/amplified+ale+works.jpg
+  location: Pacific Beach
+  year_opened: 2012
+  address: '4150 Mission Blvd, #208, San Diego, California 92109'
+- name: Arcana Brewing Co
+  url: http://www.arcanabrewing.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/5/arcana+brewing+co..png
+  location: Carlsbad
+  address: "5621 Palmer Way, Suite C\r\nCarlsbad, CA 92010"
+- name: Automatic Brewing Company
+  url: http://automaticbrewingco.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/6/automatic+brewing+company.jpg
+  location: Normal Heights
+  address: "3416 Adams Ave\r\nSan Diego, CA 92116"
+- name: Aztec Brewing Company & 7 Nations Brewing Company
+  url: http://www.aztecbrewery.com/home.html
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/7/aztec+brewing+company+/+7+nations+brewing+company.jpg
+  location: Vista
+  address: "2330 La Mirada Dr. Suite 300\r\nVista CA 92081"
+- name: Back Street Brewery
+  url: http://www.lamppostpizza.com/backstreet/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/8/back+street+brewery.gif
+  location: Vista
+  address: "15 Main Street, Suite #100\r\nVista, CA 92084"
+- name: Ballast Point Brewing & Spirits
+  url: http://www.ballastpoint.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/9/ballast+point+brewing+%26+spirits.jpg
+  location: Scripps Ranch
+  address: "10051 Old Grove Rd\r\nSan Diego, CA 92131"
+- name: Ballast Point Home Brew Mart
+  url: http://www.ballastpoint.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/10/ballast+point+home+brew+mart.jpg
+  location: Linda Vista
+  address: "5401 Linda Vista Road, Suite 406\r\nSan Diego, CA 92110"
+- name: Ballast Point Little Italy
+  url: http://www.ballastpoint.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/11/ballast+point+little+italy.jpg
+  location: Little Italy
+  year_opened: 2013
+  address: "2215 India St\r\nSan Diego, CA 92101"
+- name: Barrel Harbor
+  url: http://www.barrelharborbrewing.com/
+  remote_image_url: https://s3-us-west-1.amazonaws.com/sd-brew-hop/uploads/production/brewery/image/12/barrel+harbor.jpg
+  location: Vista
+  year_opened: 2013
+  address: "2575 Pioneer Ave #104\r\nVista, CA 92081"
+- name: Belching Beaver Brew
+  url: https://www.facebook.com/pages/The-Belching-Beaver/157351577682127
+  location: Vista
+  year_opened: 2012
+- name: Benchmark Brewing
+  url: http://www.benchmarkbrewing.com/
+  location: Grantville
+  year_opened: 2013
+- name: BNS Brewing & Distilling
+  url: http://www.bnsbrewinganddistilling.com/
+  location: Santee
+  year_opened: 2013
+- name: Booze Brothers
+  url: http://boozebrothersbrewery.com/
+  location: Vista
+  year_opened: 2013
+- name: Breakwater Brewing Company
+  url: http://breakwaterbrewing.com/
+  location: Oceanside
+- name: Butcher’s Brewing
+  url: http://butchersbrewing.com/
+  location: Santee
+  year_opened: 2013
+- name: ChuckAlek Independent Brewers
+  url: http://www.chuckalek.com/
+  location: Ramona
+  year_opened: 2013
+- name: Cold Bore Brewing Company
+  url: http://coldborebrewing.com/index.html
+  location: Jamul
+- name: Coronado Brewing Company
+  url: http://coronadobrewingcompany.com/
+  location: Coronado
+- name: Coronado Brewing Company
+  url: http://coronadobrewingcompany.com/
+  location: Bay Park
+  year_opened: 2013
+- name: Culture Brewing Co
+  url: http://www.facebook.com/CultureBrewingCo?fref=ts
+  location: Solana Beach
+  year_opened: 2013
+- name: Fallbrook Brewing Company
+  url: http://www.fallbrookbrewing.com/
+  location: Fallbrook
+  year_opened: 2013
+- name: Gordon Biersch Brewery Restaurant
+  url: http://www.gordonbiersch.com/
+  location: Mission Valley
+- name: Green Flash Brewing Co
+  url: http://www.greenflashbrew.com/
+  location: Mira Mesa
+- name: Groundswell Brewing Co
+  url: http://groundswellbrew.com/
+  location: Grantville
+  year_opened: 2013
+- name: Helm’s Brewing
+  url: http://helmsbrewingco.com/
+  location: Kearny Mesa
+  year_opened: 2012
+- name: Hess Brewing
+  url: http://hessbrewing.com/
+  location: Miramar
+- name: Hess Brewing
+  url: http://hessbrewing.com/
+  location: North Park
+  year_opened: 2013
+- name: Hillcrest Brewing Company
+  url: http://hillcrestbrewingcompany.com/
+  location: Hillcrest
+  year_opened: 2012
+- name: Indian Joe Beer
+  url: http://indianjoebeer.com/
+  location: Vista
+  year_opened: 2012
+- name: Intergalactic Brewing Co
+  url: http://intergalacticbrew.com/beer.html
+  location: Mira Mesa
+  year_opened: 2013
+- name: Iron Fist Brewing Company
+  url: http://www.ironfistbrewing.com/
+  location: Vista
+- name: Julian Brewing Company
+  url: http://www.facebook.com/julianbrewing
+  location: Julian
+  year_opened: 2012
+- name: Karl Strauss 4s Ranch
+  url: http://www.karlstrauss.com/PAGES/Eats/4SRanch.html
+  location: 4S Ranch
+  year_opened: 2012
+- name: Karl Strauss Carlsbad
+  url: http://www.karlstrauss.com/
+  location: Carlsbad
+- name: Karl Strauss Downtown
+  url: http://www.karlstrauss.com/
+  location: Downtown
+- name: Karl Strauss La Jolla
+  url: http://www.karlstrauss.com/
+  location: La Jolla
+- name: Karl Strauss Main Production Brewery
+  url: http://www.karlstrauss.com/
+  location: Pacific Beach
+- name: Karl Strauss Sorrento Mesa
+  url: http://www.karlstrauss.com/
+  location: Sorrento Mesa
+- name: KnB Cellars
+  url: http://knbwinecellars.com
+  location: Del Cerro
+  year_opened: 2013
+- name: Latitude 33 Brewing Company
+  url: http://www.lat33brew.com/
+  location: Vista
+  year_opened: 2012
+- name: Legacy Brewing
+  url: https://www.facebook.com/LegacyBrewingCompany
+  location: Oceanside
+  year_opened: 2013
+- name: Lightning Brewery
+  url: http://www.lightningbrewery.com/
+  location: Poway
+- name: Manzanita Brewing Company
+  url: http://www.manzanitabrewing.com/
+  location: Santee
+- name: Mission Brewery
+  url: http://missionbrewery.com/
+  location: Downtown
+- name: Modern Times
+  url: http://moderntimesbeer.com/
+  location: Midway
+  year_opened: 2013
+- name: Monkey Paw Pub & Brewery
+  url: http://monkeypawbrewing.com/
+  location: East Village
+- name: Mother Earth Brew Company
+  url: http://www.motherearthbrewco.com/
+  location: Vista
+- name: New English Brewing Company
+  url: http://www.newenglishbrewing.com/
+  location: Sorrento Valley
+- name: Oceanside Ale Works
+  url: http://www.oceansidealeworks.net/
+  location: Oceanside
+- name: Offbeat Brewing Company
+  url: http://www.offbeatbrewing.com
+  location: Escondido
+  year_opened: 2012
+- name: Oggi’s Pizza & Brewing Company Fenton Parkway
+  url: http://www.oggis.com/
+  location: Mission Valley
+- name: On-The-Tracks Brewery
+  url: http://www.ottbrew.com/
+  location: Carlsbad
+- name: Pacific Beach Ale House
+  url: http://www.pbalehouse.com/
+  location: Pacific Beach
+- name: Pizza Port Bressi Ranch
+  url: http://www.pizzaport.com/locations/pizza-port-bressi-ranch/
+  location: Bressi Ranch
+  year_opened: 2013
+- name: Pizza Port Carlsbad
+  url: http://www.pizzaport.com/Pizza-Port-Carlsbad-s/1818.htm
+  location: Carlsbad
+- name: Pizza Port Ocean Beach
+  url: http://www.pizzaport.com/category-s/1819.htm
+  location: Ocean Beach
+- name: Pizza Port Solana Beach
+  url: http://www.pizzaport.com/category-s/1820.htm
+  location: Solana Beach
+- name: Plan 9 Ale House
+  url: http://www.facebook.com/pages/Plan-9-Alehouse/181129215255385?ref=ts
+  location: Escondido
+  year_opened: 2013
+- name: Poor House Brewing Co
+  url: http://www.poorhousebrew.com/
+  location: North Park
+  year_opened: 2012
+- name: Port Brewing / The Lost Abbey
+  url: http://www.lostabbey.com/
+  location: San Marcos
+- name: Prohibition Brewing Company
+  url: http://prohibitionbrewingcompany.com/
+  location: Vista
+- name: Rip Current Brewing Co
+  url: http://www.beerpulse.com/2012/03/2011-national-homebrewing-conference-champion-to-start-new-brewery-in-california/
+  location: San Marcos
+  year_opened: 2012
+- name: Rock Bottom Brewery Restaurant La Jolla
+  url: http://www.rockbottom.com/la-jolla
+  location: La Jolla
+- name: Rough Draft Brewing Company
+  url: http://www.roughdraftbrew.com/
+  location: Mira Mesa
+  year_opened: 2012
+- name: San Diego Brewing Company
+  url: http://www.sandiegobrewing.com/
+  location: Grantville
+- name: San Marcos Brewery & Grill
+  url: http://sanmarcosbrewery.com/
+  location: San Marcos
+- name: Societe Brewing Co
+  url: http://www.societebrewing.com/
+  location: Kearny Mesa
+  year_opened: 2012
+- name: St. Archer Brewing Co
+  url: http://saintarcherbrewery.com/
+  location: Miramar
+  year_opened: 2013
+- name: Stone Brewing Company
+  url: http://www.stonebrew.com
+  location: Escondido
+- name: Stone Liberty Station
+  url: http://www.stonebrew.com/news/110523pr/ls/
+  location: Liberty Station
+  year_opened: 2013
+- name: Stumblefoot Brewing Company
+  url: http://www.stumblefoot.com/
+  location: San Marcos
+  year_opened: 2012
+- name: The Beer Company
+  url: http://thebeerco.net/
+  location: Downtown
+- name: Thorn St. Brewery
+  url: http://www.westcoastersd.com/2012/02/06/home-brews-gardens-loses-key-employees-the-homebrewer-opening-soon-all-about-brewing-grows/
+  location: North Park
+  year_opened: 2012
+- name: Two Kids Brewing Co
+  url: http://twokidsbrewing.blogspot.com/
+  location: Mira Mesa
+  year_opened: 2013
+- name: Valley Center Brewing
+  url: http://www.valleycenterbrewery.com/
+  location: Valley Center
+  year_opened: 2013
+- name: Wet ‘N Reckless Brewing Company
+  url: http://www.wetnreckless.com/
+  location: Mira Mesa
+  year_opened: 2012
+- name: White Labs experimental beer tasting room
+  url: http://whitelabs.com/
+  location: Miramar
+  year_opened: 2012
+

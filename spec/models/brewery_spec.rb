@@ -1,7 +1,16 @@
 require 'spec_helper'
 
 describe Brewery do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:brewery) { Brewery.create! name: 'The Brewery' }
+  describe '#leaderboard' do
+    let(:user1) { User.create! }
+    let(:user2) { User.create! }
+    it "returns the top hoppers in order" do
+      1.times { Hop.create! user:user1, brewery:brewery }
+      2.times { Hop.create! user:user2, brewery:brewery }
+      brewery.leaderboard.should == [ [user2,2], [user1,1] ]
+    end
+  end
 end
 
 # == Schema Information

@@ -1,0 +1,16 @@
+= form_for @hop do |f|
+  - if @hop.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@hop.errors.count, "error")} prohibited this hop from being saved:"
+      %ul
+        - @hop.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :remote_image_url
+    = f.text_field :remote_image_url
+  .field
+    = f.label :message
+    = f.text_area :message
+  .actions
+    = f.submit "Hop #{@hop.brewery.name}
