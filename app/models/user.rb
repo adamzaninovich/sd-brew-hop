@@ -16,6 +16,25 @@ class User < ActiveRecord::Base
       user.oauth_expires_at = Time.at auth.credentials.expires_at
     end
   end
+
+  def facebook
+    @facebook ||= Koala::Facebook::API.new oauth_token
+    block_given? ? yield(@facebook) : @facebook
+  rescue Koala::Facebook::APIError => e
+    logger.info e.to_s
+    nil
+  end
+
+  def friends
+    @friends ||= begin
+      facebook_friends = facebook { |fb| fb.get_connection :me, :friends }
+      if facebook_friends.present?
+        facebook_friends.map { |friend| friend.fetch('id').to_s }
+        User.where uid: friend_ids
+      end
+    end
+  end
+
 end
 
 # == Schema Information
