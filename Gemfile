@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem "bootstrap-sass", "~> 3.0.2.1"
 gem "omniauth-facebook", '~> 1.4.1'
+gem 'koala', '1.6.0'
 
 gem 'rmagick', '~> 2.13.2'
 gem 'carrierwave', '~> 0.9.0'
