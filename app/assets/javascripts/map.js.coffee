@@ -5,6 +5,7 @@ class Map
       center: new google.maps.LatLng center.latitude, center.longitude
       zoom: zoom
       mapTypeId: google.maps.MapTypeId.ROADMAP
+      scrollwheel: false
     @markers = []
 
   addMarker: (location, title='') ->
