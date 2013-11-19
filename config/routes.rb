@@ -10,6 +10,8 @@ SdBrewHop::Application.routes.draw do
     resources :hops
   end
   resources :activities
+  resources :users, only: [:show]
+  get "profile" => 'users#show', as: :profile
 
   # Static Pages
   get "legal/terms"   => 'home#terms',   as: :terms
