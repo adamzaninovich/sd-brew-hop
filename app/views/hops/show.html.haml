@@ -1,18 +1,20 @@
-%p#notice= notice
+%h3
+  = link_to @hop.user_name(current_user), '#@hop.user'
+  hopped
+  = link_to @hop.brewery.name, @hop.brewery
+  %small
+    = time_ago_in_words @hop.created_at
+    ago
 
-%p
-  %b User:
-  = @hop.user
-%p
-  %b Brewery:
-  = @hop.brewery
-%p
-  %b Image:
-  = @hop.image
-%p
-  %b Message:
-  = @hop.message
+.row{style:"margin-top:20px"}
+  - if @hop.image? || @hop.message?
+    .col-sm-7
+      - if @hop.image?
+        %p= image_tag @hop.image_url(:thumb), class:'img-rounded'
+      - if @hop.message?
+        = simple_format %Q{"#{@hop.message}"}, {class:"lead",style:"margin: 20px 0 20px 10px;font-size:2.5em;"}
 
-= link_to 'Edit', edit_hop_path(@hop)
-\|
-= link_to 'Back', hops_path
+  .col-sm-5
+    = render partial: 'hops/friend_hops_at_brewery', locals: { brewery:@hop.brewery }
+    = render partial: 'breweries/nearbys', locals: { brewery:@hop.brewery }
+

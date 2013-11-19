@@ -33,10 +33,4 @@
     .hidden-xs
       - if @brewery.image?
         = image_tag @brewery.image_url(:thumb), class:'img-rounded', width:'100%'
-    - if @brewery.has_location? && @brewery.nearbys.any?
-      %h3 Nearby Breweries
-      %ul.list-unstyled
-        - for brewery in @brewery.nearbys
-          %li
-            = link_to brewery.name, brewery
-            (#{brewery.distance.round 2} miles away)
+      = render partial: 'breweries/nearbys', locals: { brewery:@brewery }

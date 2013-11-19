@@ -1,0 +1,8 @@
+- if brewery.has_location? && brewery.nearbys.any?
+  %h3 Nearby Breweries
+  %ul.list-unstyled
+    - for nearby_brewery in brewery.nearbys
+      %li
+        = link_to nearby_brewery.name, nearby_brewery
+        (#{nearby_brewery.distance.round 2} miles away)
+
