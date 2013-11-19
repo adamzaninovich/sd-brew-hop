@@ -1,0 +1,16 @@
+%h1 Friends' Activities
+
+%ul.list-unstyled
+  - @activities.each do |activity|
+    %li.activity
+      - if activity.owner
+        - if activity.owner == current_user
+          You
+        - else
+          = link_to activity.owner.name, '#'
+      - else
+        Someone
+      Hopped
+      = link_to activity.trackable.brewery.name, activity.trackable.brewery
+      = time_ago_in_words activity.trackable.created_at
+

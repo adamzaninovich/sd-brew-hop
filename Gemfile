@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.1'
+
+# views and assets
 gem 'sass-rails', '~> 4.0.0'
 gem 'haml-rails', '0.4'
 gem 'uglifier', '>= 1.3.0'
@@ -10,15 +12,24 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem "bootstrap-sass", "~> 3.0.2.1"
+
+# geocoding
+gem 'geocoder', '~> 1.1.8'
+
+# auth
 gem "omniauth-facebook", '~> 1.4.1'
+
+# social
 gem 'koala', '1.6.0'
 
+# image uploads
 gem 'rmagick', '~> 2.13.2'
 gem 'carrierwave', '~> 0.9.0'
 gem 'fog', '~> 1.18.0'
 gem 'unf', '~> 0.1.3'
 
-gem 'geocoder', '~> 1.1.8'
+# activity feeds
+gem 'public_activity', '1.4.0'
 
 group :production do
   gem 'pg'

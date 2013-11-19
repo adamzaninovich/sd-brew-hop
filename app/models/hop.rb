@@ -1,6 +1,9 @@
 class Hop < ActiveRecord::Base
+  include PublicActivity::Model
   belongs_to :user
   belongs_to :brewery
+
+  tracked owner: ->(_,hop) { hop.user }
 
   scope :for_brewery_and_user, ->(brewery,user) { for_brewery(brewery).for_user(user) }
   scope :for_brewery, ->(brewery) { where brewery: brewery }
