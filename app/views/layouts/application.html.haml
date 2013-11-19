@@ -24,14 +24,24 @@
         = render partial: 'shared/flash_messages'
         = yield
     #footer
-      .container
+      .container{style:'background:#f5f5f5'}
         .text-muted.credit.row
-          .col-lg-4
-            %small &copy; 2013 SD Brew Hop
-          .col-lg-4.center
-            %small #{link_to 'Terms', terms_path}
-            %small &nbsp;&bull;&nbsp;
-            %small #{link_to 'Privacy', privacy_path}
-          .col-lg-4.right-align
-            %small P.S. You look great today
+          .hidden-xs
+            .col-lg-4.col-md-4.col-sm-4
+              %small &copy; 2013 SD Brew Hop
+            .col-lg-4.col-md-4.col-sm-4.center
+              %small #{link_to 'Terms', terms_path}
+              %small &nbsp;&bull;&nbsp;
+              %small #{link_to 'Privacy', privacy_path}
+            .col-lg-4.col-md-4.col-sm-4.right-align
+              %small P.S. You look great today
+          .visible-xs.center
+            .col-xs-12
+              %small &copy; 2013 SD Brew Hop
+            .col-xs-12
+              %small #{link_to 'Terms', terms_path}
+              %small &nbsp;&bull;&nbsp;
+              %small #{link_to 'Privacy', privacy_path}
+            .col-xs-12
+              %small P.S. You look great today
 
