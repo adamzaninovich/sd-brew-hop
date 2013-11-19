@@ -27,7 +27,7 @@ class HopsController < ApplicationController
 
     respond_to do |format|
       if @hop.save
-        format.html { redirect_to [brewery, hop], notice: @hop.success_message }
+        format.html { redirect_to [brewery, @hop], notice: @hop.success_message }
         format.json { render action: :show, status: :created, location: @hop }
       else
         format.html { render action: :new }
