@@ -1,16 +1,9 @@
-%h1 Friends' Activities
+%h1 Recent Activity on SD Brew Hop
 
-%ul.list-unstyled
-  - @activities.each do |activity|
-    %li.activity
-      - if activity.owner
-        - if activity.owner == current_user
-          You
-        - else
-          = link_to activity.owner.name, '#'
-      - else
-        Someone
-      Hopped
-      = link_to activity.trackable.brewery.name, activity.trackable.brewery
-      = time_ago_in_words activity.trackable.created_at
+- if @activities.any?
+  %ul.list-unstyled{style:"margin-top:40px;"}
+    - for activity in @activities
+      %li.activity.panel.panel-default= render partial: 'activity', locals: { activity: activity }
+- else
+  No activity, tell your friends to start hopping!
 

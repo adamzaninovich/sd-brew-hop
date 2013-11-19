@@ -40,7 +40,15 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-    "#{model.name.underscore}.#{file.extension}" if original_filename
+    if original_filename
+      fname = case model.class.to_s
+      when "Brewery"
+        "#{model.name.underscore}"
+      when "Hop"
+        "#{model.brewery.name.parameterize}-#{model.user.name.parameterize}"
+      end
+      "#{fname}.#{file.extension}" if fname
+    end
   end
 
 end

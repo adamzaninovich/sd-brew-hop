@@ -13,6 +13,7 @@
       %ul.nav.navbar-nav
         %li.active= link_to 'Home', root_path
         - if current_user
+          %li= link_to 'Activity Feed', activities_path
           %li= link_to 'Breweries', breweries_path
       = render partial: 'shared/user_status'
     / /.nav-collapse

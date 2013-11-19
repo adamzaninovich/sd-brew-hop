@@ -1,0 +1,11 @@
+%h3 Your Friends' Hops Here
+%ul.list-unstyled
+  - friend_hops = Hop.friends_hops_for_brewery_and_user @hop.brewery, current_user
+  - if friend_hops.any?
+    - for hop in friend_hops
+      - unless hop == @hop
+        %li
+          = link_to hop.user.name, [hop.brewery,hop]
+          (#{time_ago_in_words hop.created_at} ago)
+  - else
+    None of your friends have hopped here

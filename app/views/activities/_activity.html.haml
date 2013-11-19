@@ -1,0 +1,17 @@
+.panel-heading
+  %h4
+    = link_to activity.trackable.user_name(current_user), '#activity.trackable.user'
+    hopped
+    = link_to activity.trackable.brewery.name, activity.trackable.brewery
+    %small
+      = link_to [activity.trackable.brewery, activity.trackable] do
+        = time_ago_in_words activity.trackable.created_at
+        ago
+
+- if activity.trackable.image? || activity.trackable.message?
+  - if activity.trackable.image?
+    = link_to [activity.trackable.brewery, activity.trackable], class:'pull-left' do
+      = image_tag activity.trackable.image_url(:thumb), class:'media-object', height: '75px'
+  - if activity.trackable.message?
+    = simple_format %Q{"#{activity.trackable.message}"}, {class:"lead pull-left",style:"margin: 20px 0 20px 10px"}
+  .clearfix

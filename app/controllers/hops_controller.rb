@@ -27,7 +27,7 @@ class HopsController < ApplicationController
 
     respond_to do |format|
       if @hop.save
-        format.html { redirect_to brewery, notice: @hop.success_message }
+        format.html { redirect_to [brewery, hop], notice: @hop.success_message }
         format.json { render action: :show, status: :created, location: @hop }
       else
         format.html { render action: :new }
@@ -72,6 +72,6 @@ class HopsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def hop_params
-    params.require(:hop).permit :remote_image_url, :message
+    params.require(:hop).permit :remote_image_url, :message, :image
   end
 end
