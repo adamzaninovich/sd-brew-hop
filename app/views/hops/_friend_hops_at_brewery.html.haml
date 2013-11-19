@@ -1,7 +1,7 @@
 %h3 Your Friends' Hops Here
 %ul.list-unstyled
   - friend_hops = Hop.friends_hops_for_brewery_and_user @hop.brewery, current_user
-  - if friend_hops.any?
+  - if friend_hops && friend_hops.any?
     - for hop in friend_hops
       - unless hop == @hop
         %li
