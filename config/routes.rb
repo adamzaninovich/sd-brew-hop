@@ -9,6 +9,7 @@ SdBrewHop::Application.routes.draw do
   resources :breweries do
     resources :hops
   end
+  resources :activities
 
   # Static Pages
   get "legal/terms"   => 'home#terms',   as: :terms
