@@ -9,6 +9,9 @@ SdBrewHop::Application.routes.draw do
     resources :hops
   end
 
+  resources :users, only: [:show]
+  get "profile" => 'users#show', as: :profile
+
   get "legal/terms"   => 'home#terms',   as: :terms
   get "legal/privacy" => 'home#privacy', as: :privacy
 
