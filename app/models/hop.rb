@@ -12,7 +12,11 @@ class Hop < ActiveRecord::Base
   scope :for_user, ->(user) { where user:user }
 
   def self.friends_hops_for_brewery_and_user brewery, current_user
-    for_brewery(brewery).where(user_id:current_user.friends.map(&:id)).order 'created_at desc'
+    if current_user.friends.any?
+      for_brewery(brewery).where(user_id:current_user.friends.map(&:id)).order 'created_at desc'
+    else
+      []
+    end
   end
 
   def success_message
