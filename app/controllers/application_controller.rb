@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def authorize!
-    redirect_to root_path, alert: "You must sign in first!" and return unless current_user
+    unless params[:format] == 'json'
+      redirect_to root_path, alert: "You must sign in first!" and return unless current_user
+    end
   end
 end

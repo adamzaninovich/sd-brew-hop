@@ -9,10 +9,6 @@ class Brewery < ActiveRecord::Base
     latitude.present? && longitude.present?
   end
 
-  def self.random_image *args
-    select {|b| b.image.present?}.sample.image_url *args
-  end
-
   def leaderboard
     User.all.map do |user|
       [user, Hop.for_brewery_and_user(self, user).count]
