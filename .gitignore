@@ -20,3 +20,7 @@
 
 # Ignore images
 /public/uploads
+
+# Ignore pow config
+.powrc
+.powenv
