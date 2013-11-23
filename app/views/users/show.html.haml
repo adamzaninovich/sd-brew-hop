@@ -1,0 +1,24 @@
+.jumbotron{ :class => "row" }
+  .col-md-10
+  %h2= current_user.name
+  .row
+    .col-md-3
+      %img{ :src => "#{current_user.image}", :width => "25%", :height => "%25" }
+    .col-md-3
+      Joined:
+      = current_user.created_at.strftime "%b %d, %Y"
+      %br
+      Hops: 
+      = current_user.hops.count
+      %br
+      Breweries: -
+
+    #img-wall.pull-right.img-thumbnail{style:'width:310px;height:250px;'}
+      - for brewery in Brewery.all
+        - if Hop.find_by_user_id current_user.id and Hop.find_by_brewery_id brewery.id
+          = image_tag (brewery.image_url(:wall)||'http://placehold.it/30x30'), class: 'pull-left tip-on-hover', :'data-toggle' => 'tooltip', title:brewery.name
+        -else
+          = image_tag ('http://placehold.it/30x30'), class: 'pull-left tip-on-hover', :'data-toggle' => 'tooltip', title:brewery.name
+
+
+
