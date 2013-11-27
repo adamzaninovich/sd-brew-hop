@@ -127,9 +127,6 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
-    pry-remote (0.1.7)
-      pry (~> 0.9)
-      slop (~> 3.0)
     public_activity (1.4.0)
       actionpack (>= 3.0.0)
       activerecord (>= 3.0)
@@ -228,7 +225,6 @@ DEPENDENCIES
   omniauth-facebook (~> 1.4.1)
   pg
   pry
-  pry-remote
   public_activity (= 1.4.0)
   rails (= 4.0.1)
   rails_12factor

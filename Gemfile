@@ -40,7 +40,6 @@ end
 group :development do
   gem 'foreman'
   gem 'pry'
-  gem 'pry-remote'
   gem 'annotate', '2.5.0'
 end
 
