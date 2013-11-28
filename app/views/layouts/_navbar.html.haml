@@ -1,5 +1,5 @@
 / Fixed navbar
-.navbar.navbar-default.navbar-fixed-top{role: "navigation"}
+%nav.navbar.navbar-default.navbar-fixed-top{role: "navigation"}
   .container
     .navbar-header
       %button.navbar-toggle{type: "button", data: {target: ".navbar-collapse", toggle: "collapse"}}
@@ -16,5 +16,4 @@
           %li= link_to 'Activity Feed', activities_path
           %li= link_to 'Breweries', breweries_path
       = render partial: 'shared/user_status'
-    / /.nav-collapse
 

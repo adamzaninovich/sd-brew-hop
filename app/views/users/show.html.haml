@@ -1,24 +1,53 @@
-.jumbotron{ :class => "row" }
-  .col-md-10
-  %h2= current_user.name
-  .row
-    .col-md-3
-      %img{ :src => "#{current_user.image}", :width => "25%", :height => "%25" }
-    .col-md-3
-      Joined:
-      = current_user.created_at.strftime "%b %d, %Y"
-      %br
-      Hops: 
-      = current_user.hops.count
-      %br
-      Breweries: -
+.jumbotron
+  %h1
+    = @user.name
+    %small #{pluralize @user.hops.count, 'hop'} at #{pluralize @user.hopped_breweries.count, 'brewery' }
 
-    #img-wall.pull-right.img-thumbnail{style:'width:310px;height:250px;'}
-      - for brewery in Brewery.all
-        - if Hop.find_by_user_id current_user.id and Hop.find_by_brewery_id brewery.id
-          = image_tag (brewery.image_url(:wall)||'http://placehold.it/30x30'), class: 'pull-left tip-on-hover', :'data-toggle' => 'tooltip', title:brewery.name
-        -else
-          = image_tag ('http://placehold.it/30x30'), class: 'pull-left tip-on-hover', :'data-toggle' => 'tooltip', title:brewery.name
+  .row
+    .col-md-2
+      = image_tag @user.fb_image(:large), width: '100%'
+    .col-md-4
+      %h5 Joined #{@user.created_at.strftime "%b %Y"}
+      - if @user.hopped_breweries.any?
+        %h5 Favorite breweries:
+        %ul.list-unstyled
+          - for brewery in @user.favorite_breweries
+            %li{style: 'font-size:14px;'}= link_to brewery.name, brewery
+    .col-md-6
+      - if @user.hopped_breweries.any?
+        #img-wall.img-thumbnail{style:'max-width:490px'}
+          - for brewery in @user.hopped_breweries
+            = link_to brewery do
+              = image_tag (brewery.image_url(:wall)||'http://placehold.it/30x30'), class: 'pull-left tip-on-hover', :'data-toggle' => 'tooltip', title:brewery.name
+        %p= link_to "what's this?", nil, style:'font-size:14px;', title:'This is your Brew Wall. It shows all the breweries you have been hopped!', class:'tip-on-hover', :'data-toggle' => 'tooltip', onclick:'javascript:return false'
+      - else
+        %p No hops
+  .row
+    .col-md-9
+      %h3 #{@user.first_name}'s Hop Feed
+      - if @user.feed.any?
+        %ul.list-unstyled{style:"margin-top:40px;"}
+          - for activity in @user.feed
+            %li.activity.panel.panel-default= render partial: 'activities/activity', locals: { activity: activity }
+      - else
+        No activity, start hopping!
+    .col-md-3
+      %h3 #{@user.first_name}'s Friends
+      - if @user.friends.any?
+        %ul.list-unstyled
+          - for friend in @user.friends
+            %li
+              = link_to friend do
+                - if friend.image?
+                  = image_tag friend.fb_image(:square), size:'20x20'
+                = friend.name
+
+      - elsif @user == current_user
+        Tell your friends to use SD Brew Hop!
+      - else
+        #{@user.first_name} has no friends :(
+
+
 
 
 
