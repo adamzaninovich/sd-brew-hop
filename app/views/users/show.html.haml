@@ -38,8 +38,7 @@
           - for friend in @user.friends
             %li
               = link_to friend do
-                - if friend.image?
-                  = image_tag friend.fb_image(:square), size:'20x20'
+                = image_tag friend.fb_image(:square), size:'25x25'
                 = friend.name
 
       - elsif @user == current_user

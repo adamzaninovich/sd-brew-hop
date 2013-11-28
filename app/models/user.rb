@@ -22,11 +22,11 @@ class User < ActiveRecord::Base
   end
 
   def fb_image type=nil
-    if image && type && %w|square small normal large|.include?(type.to_s)
-      image.gsub 'square', type.to_s
-    else
-      image
+    image = "http://graph.facebook.com/#{uid}/picture"
+    if type && %w|square small normal large|.include?(type.to_s)
+      image << "?type=#{type.to_s}"
     end
+    image
   end
 
   def has_hopped_brewery? brewery
@@ -55,13 +55,13 @@ class User < ActiveRecord::Base
   end
 
   def friends
-    @friends ||= begin
+    @friends ||= Rails.cache.fetch("facebook_friends:#{id}", expires_in: 1.day) do
       facebook_friends = facebook { |fb| fb.get_connection :me, :friends }
       if facebook_friends.present?
         friend_ids = facebook_friends.map { |friend| friend.fetch('id').to_s }
         User.where uid: friend_ids
-      end
-    end || []
+      end || []
+    end
   end
 
 end
