@@ -14,6 +14,12 @@ class Brewery < ActiveRecord::Base
       [user, Hop.for_brewery_and_user(self, user).count]
     end.sort_by(&:last).reverse
   end
+
+  def feed
+    hop_ids = hops.pluck :id
+    PublicActivity::Activity.where(trackable_id:hop_ids).order 'created_at desc'
+  end
+
 end
 
 # == Schema Information
