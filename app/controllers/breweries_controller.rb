@@ -1,6 +1,6 @@
 class BreweriesController < ApplicationController
-  before_action :set_brewery, only: [:show, :edit, :update, :destroy]
-  before_filter :authorize!
+  before_action :set_brewery, only: %i[show edit update destroy]
+  before_filter :authorize!, except: %i[index show]
 
   # GET /breweries
   # GET /breweries.json
