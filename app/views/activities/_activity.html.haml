@@ -1,6 +1,6 @@
 .panel-heading
   %h4
-    = link_to activity.trackable.user_name(current_user), '#activity.trackable.user'
+    = link_to activity.trackable.user_name(current_user), activity.owner
     hopped
     = link_to activity.trackable.brewery.name, activity.trackable.brewery
     %small
