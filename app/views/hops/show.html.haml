@@ -6,13 +6,13 @@
     = time_ago_in_words @hop.created_at
     ago
 
-.row{style:"margin-top:20px"}
+.hop-container.row
   - if @hop.image? || @hop.message?
     .col-sm-7
       - if @hop.image?
         %p= image_tag @hop.image_url(:thumb), class:'img-rounded'
       - if @hop.message?
-        = simple_format %Q{"#{@hop.message}"}, {class:"lead",style:"margin: 20px 0 20px 10px;font-size:2.5em;"}
+        = simple_format %Q{"#{@hop.message}"}, {class:"lead hop-message"}
 
   .col-sm-5
     = render partial: 'hops/friend_hops_at_brewery', locals: { brewery:@hop.brewery }

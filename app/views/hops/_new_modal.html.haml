@@ -1,5 +1,4 @@
-%button.btn.btn-success.btn-lg{data:{toggle:'modal', target:'#hop-form'}, style:"font-size:2.5em;"}
-  Hop it!
+%button.hop-button.btn.btn-success.btn-lg{data:{toggle:'modal', target:'#hop-form'}} Hop it!
 = form_for [@brewery,@hop], html: { multipart: true, role: 'form', class: 'form-horizontal' } do |f|
   #hop-form.modal.fade
     .modal-dialog

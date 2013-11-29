@@ -1,9 +1,19 @@
-%h1 Recent Activity on SD Brew Hop
+.row
+  .col-md-8
+    %h1 Recent Activity
+    - if @activities.any?
+      %ul.list-unstyled.activities
+        - for activity in @activities
+          %li.activity.panel.panel-default= render partial: 'activity', locals: { activity: activity }
+    - else
+      No activity, tell your friends to start hopping!
+  .col-md-4
+    %h2 Most Popular Breweries
+    %ul.list-unstyled
+      - for brewery in Brewery.take 10
+        - if brewery.hops.count > 0
+          %li
+            = link_to brewery.name, brewery
+            (#{pluralize brewery.hops.count, 'hop'})
 
-- if @activities.any?
-  %ul.list-unstyled{style:"margin-top:40px;"}
-    - for activity in @activities
-      %li.activity.panel.panel-default= render partial: 'activity', locals: { activity: activity }
-- else
-  No activity, tell your friends to start hopping!
 

@@ -14,12 +14,9 @@
         map.addMarker location, brewery.name
 
 .jumbotron
-  #img-wall.pull-right.img-thumbnail{style:'width:310px;height:250px;'}
+  .img-wall.pull-right.img-thumbnail
     - for brewery in Brewery.all
-      - if current_user
-        = link_to brewery do
-          = image_tag (brewery.image_url(:wall)||'http://placehold.it/30x30'), class: 'pull-left tip-on-hover', :'data-toggle' => 'tooltip', title:brewery.name
-      - else
+      = link_to brewery do
         = image_tag (brewery.image_url(:wall)||'http://placehold.it/30x30'), class: 'pull-left tip-on-hover', :'data-toggle' => 'tooltip', title:brewery.name
   %h1 SD Brew Hop
   %p.lead
@@ -42,5 +39,5 @@
     - else
       = link_to 'Sign in with Facebook to get started!', 'auth/facebook', class: "btn btn-primary btn-lg btn-block", role: "button"
 
-  #map.img-thumbnail{style: 'width:100%;height:400px', data: {breweries:Brewery.all.to_json}}
+  #home-map.img-thumbnail{data: {breweries:Brewery.all.to_json}}
 

@@ -10,7 +10,7 @@
 .row
   .col-lg-7.col-md-7.col-sm-6
     - if @brewery.image?
-      .visible-xs.img-rounded{style:"width:100%;height:175px;overflow:hidden;background:url(#{@brewery.image_url(:thumb)}) center no-repeat"}
+      .visible-xs.img-rounded.brewery-image{style:"background:url(#{@brewery.image_url :thumb}) center no-repeat"}
     %h1= @brewery.name
     %p.lead= link_to format_url(@brewery.url), @brewery.url
     .row
@@ -19,9 +19,9 @@
       .col-xs-6
         = simple_format @brewery.address
         %p.hidden-xs= render partial: 'area_and_year'
-    %p.visible-xs{style:"margin-top:10px;"}= render partial: 'area_and_year'
+    %p.visible-xs.brewery-map-container= render partial: 'area_and_year'
     - if @brewery.has_location?
-      #map.img-thumbnail.hidden-xs{style: 'width:100%; height:250px', data: {latitude:@brewery.latitude, longitude: @brewery.longitude, name: @brewery.name}}
+      #map.img-thumbnail.hidden-xs.brewery-map{data: {latitude:@brewery.latitude, longitude: @brewery.longitude, name: @brewery.name}}
       .visible-xs= link_to 'View a map of this brewery', "http://maps.google.com/?q=#{@brewery.latitude},#{@brewery.longitude} #{@brewery.name}"
 
     #activity-feed
