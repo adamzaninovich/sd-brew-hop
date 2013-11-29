@@ -1,6 +1,6 @@
 :coffee
   jQuery ->
-    selector = '#map'
+    selector = '.map'
     center =
       latitude: '32.85'
       longitude: '-117.075'
@@ -39,5 +39,5 @@
     - else
       = link_to 'Sign in with Facebook to get started!', 'auth/facebook', class: "btn btn-primary btn-lg btn-block", role: "button"
 
-  #home-map.img-thumbnail{data: {breweries:Brewery.all.to_json}}
+  #home-map.map.img-thumbnail{data: {breweries:Brewery.all.to_json}}
 
