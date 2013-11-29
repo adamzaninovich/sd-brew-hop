@@ -4,5 +4,5 @@
     - for nearby_brewery in brewery.nearbys
       %li
         = link_to nearby_brewery.name, nearby_brewery
-        (#{nearby_brewery.distance.round 2} miles away)
+        %small #{nearby_brewery.distance.round 2} miles away
 

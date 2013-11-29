@@ -10,10 +10,9 @@
   .col-md-4
     %h2 Most Popular Breweries
     %ul.list-unstyled
-      - for brewery in Brewery.take 10
-        - if brewery.hops.count > 0
-          %li
-            = link_to brewery.name, brewery
-            (#{pluralize brewery.hops.count, 'hop'})
+      - for brewery in Brewery.popular
+        %li
+          = link_to brewery.name, brewery
+          %small (#{pluralize brewery.hops.count, 'hop'})
 
 

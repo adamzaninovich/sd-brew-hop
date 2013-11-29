@@ -5,6 +5,11 @@ class Brewery < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 
+  def self.popular
+    brewery_ids = Hop.all.group_by(&:brewery_id).map &:first
+    Brewery.find(brewery_ids).sort_by {|brewery| -brewery.hops.count }
+  end
+
   def has_location?
     latitude.present? && longitude.present?
   end
