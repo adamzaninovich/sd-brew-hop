@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
     name.split.first
   end
 
+  def to_param
+    "#{id}-#{name}".parameterize
+  end
+
   def fb_image type=nil
     image = "http://graph.facebook.com/#{uid}/picture"
     if type && %w|square small normal large|.include?(type.to_s)
