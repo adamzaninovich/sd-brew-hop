@@ -10,6 +10,10 @@ class Brewery < ActiveRecord::Base
     Brewery.find(brewery_ids).sort_by {|brewery| -brewery.hops.count }
   end
 
+  def to_param
+    "#{id}-#{name}".parameterize
+  end
+
   def has_location?
     latitude.present? && longitude.present?
   end

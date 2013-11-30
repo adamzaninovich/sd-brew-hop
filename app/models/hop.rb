@@ -19,6 +19,10 @@ class Hop < ActiveRecord::Base
     end
   end
 
+  def to_param
+    "#{id}-#{user.name}".parameterize
+  end
+
   def success_message
     message = "<strong>Congrats!</strong> You Hopped #{brewery.name}!"
     message << hop_count_message
